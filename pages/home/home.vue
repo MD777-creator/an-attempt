@@ -39,7 +39,9 @@
 </template>
 
 <script>
+  import badgeMix from "@/mixins/tabbar-badge.js"
   export default {
+    mixins: [badgeMix],
     data() {
       return {
         swiperList: [],
@@ -86,9 +88,9 @@
         })
         this.floorList = res.message
       },
-      gotoSearch(){
+      gotoSearch() {
         uni.navigateTo({
-          url:"/subpkg/search/search"
+          url: "/subpkg/search/search"
         })
       }
     }
@@ -133,7 +135,8 @@
     display: flex;
     padding-left: 10rpx;
   }
-  .search-box{
+
+  .search-box {
     position: sticky;
     top: 0;
     z-index: 999;
