@@ -41,9 +41,6 @@
           this.updateAddress(succ)
         }
       },
-      async chooseAddress() {
-        const [err, succ] = await uni.chooseAddress().catch(err => err)
-      }
     },
     computed: {
       ...mapState('m_user', ['address']),
